@@ -1,0 +1,14 @@
+name: Publish Docs via GitHub Pages
+
+on:
+    push:
+        branches:
+        - main
+
+jobs:
+  build:
+    name: Deploy docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3.0.2

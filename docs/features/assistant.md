@@ -7,28 +7,28 @@ The **Assistant** provides a streamlined, user-friendly interface for business u
 
 #### Why Assistant Exists
 
-**The Challenge:**
-- Full QuickRPA interface contains many features business users don't need
-- Users may be overwhelmed by robots, queues, vaults, and technical details
-- Some users only need to trigger specific robots occasionally
+**The Challenge:**  
+- Full QuickRPA interface contains many features business users don't need  
+- Users may be overwhelmed by robots, queues, vaults, and technical details  
+- Some users only need to trigger specific robots occasionally  
 
-**The Solution:**
-- Assistant provides a curated list of robots for each user
-- Simple, focused interface: "Which robot do you want to run?"
-- Hides technical complexity while maintaining security and audit trail
-- Perfect for empowering business stakeholders without technical training
+**The Solution:**  
+- Assistant provides a curated list of robots for each user  
+- Simple, focused interface: "Which robot do you want to run?"  
+- Hides technical complexity while maintaining security and audit trail  
+- Perfect for empowering business stakeholders without technical training  
 
 #### Assistant Architecture
 
-**AssistantUserRobot** (Link Record)
-- Connects a specific user to a specific robot
-- Defines which robots a user can access through the Assistant interface
-- Can include default parameters or configurations for easier execution
+**AssistantUserRobot** (Link Record)  
+- Connects a specific user to a specific robot  
+- Defines which robots a user can access through the Assistant interface  
+- Can include default parameters or configurations for easier execution  
 
-**Assistant APIs**
-- Specialized endpoints that show only allowed robots
-- Simplified run initiation (fewer options, sensible defaults)
-- Status checking and log downloading for runs the user initiated
+**Assistant APIs**  
+- Specialized endpoints that show only allowed robots  
+- Simplified run initiation (fewer options, sensible defaults)  
+- Status checking and log downloading for runs the user initiated  
 
 **[Image Placeholder: Assistant Dashboard - User View]**
 

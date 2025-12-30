@@ -7,31 +7,31 @@
 
 #### Why Use Queues?
 
-Traditional automation runs sequentially—if processing 1,000 invoices and an error occurs on invoice #500, you might lose track of which items succeeded and which failed. Queues solve this by treating each invoice as a separate item with its own status tracking.
+Traditional automation runs sequentially. If processing 1,000 invoices and an error occurs on invoice#500, you might lose track of which items succeeded and which failed. Queues solve this by treating each invoice as a separate item with its own status tracking.
 
-**Benefits:**
-- **Granular Status Tracking**: Know exactly which items succeeded, failed, or are still pending
-- **Automatic Retry**: Failed items can be automatically retried without reprocessing successful ones
-- **Parallel Processing**: Multiple robots can process different items from the same queue simultaneously
-- **Priority Handling**: Mark certain items as high-priority to process them first
-- **Work Distribution**: Intelligently distribute work across available agent machines
-- **Resilience**: If a robot crashes, only the current item is affected—others remain safe
-- **Progress Visibility**: Real-time monitoring of queue depth and processing rates
+**Benefits:**  
+- **Granular Status Tracking**: Know exactly which items succeeded, failed, or are still pending  
+- **Automatic Retry**: Failed items can be automatically retried without reprocessing successful ones  
+- **Parallel Processing**: Multiple robots can process different items from the same queue simultaneously  
+- **Priority Handling**: Mark certain items as high-priority to process them first  
+- **Work Distribution**: Intelligently distribute work across available agent machines  
+- **Resilience**: If a robot crashes, only the current item is affected—others remain safe  
+- **Progress Visibility**: Real-time monitoring of queue depth and processing rates  
 
 #### Queue Structure
 
-**Queue** (Container)
-- Named collection of work items (e.g., "Invoices_To_Process", "Customer_Onboarding_Requests")
-- Belongs to a specific workspace
-- Has configuration: retry policies, item timeout, priority rules
-- Can have multiple robots consuming from it
+**Queue** (Container)  
+- Named collection of work items (e.g., "Invoices_To_Process", "Customer_Onboarding_Requests")  
+- Belongs to a specific workspace  
+- Has configuration: retry policies, item timeout, priority rules  
+- Can have multiple robots consuming from it  
 
-**Queue Item** (Individual Work Unit)
-- Represents one piece of work (one invoice, one customer record, one file to process)
-- Contains data needed for processing (JSON payload with business data)
-- Has a lifecycle status: NEW → PROCESSING → DONE/FAILED/ARCHIVED
-- Tracks processing attempts, error messages, and processing duration
-- Can have priority levels (1-5, where 1 is lowest, 5 is highest)
+**Queue Item** (Individual Work Unit)  
+- Represents one piece of work (one invoice, one customer record, one file to process)  
+- Contains data needed for processing (JSON payload with business data)  
+- Has a lifecycle status: NEW → PROCESSING → DONE/FAILED/ARCHIVED  
+- Tracks processing attempts, error messages, and processing duration  
+- Can have priority levels (1-5, where 1 is lowest, 5 is highest)  
 
 **[Image Placeholder: Queue Dashboard Showing Multiple Queues]**
 
