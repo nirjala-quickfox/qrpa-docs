@@ -1,0 +1,27 @@
+site_name: QuickRPA — User Documentation
+site_description: Simple, practical guides for end users of QuickRPA.
+nav:
+  - Introduction:
+    - Home: index.md
+  - Overview: 
+    - Who uses QuickRPA?: users.md
+    - Typical Workflows: typical_workflows.md
+    - System Architecture: system_architecture.md
+  - Features:
+    - Overview: features/feature_guide.md
+    - Organizations: features/organizations_and_workspaces.md
+    - Users, Roles, and Permissions: features/users_roles_and_permissions.md
+    - Robots and Robot Versions: features/robots_and_robot_versions.md
+    - Runs and Scheduling: features/runs_and_scheduling.md
+    - Queues and Queue Items: features/queues_and_queue_items.md
+    - Vaults and Secrets: features/vaults.md
+    - Storage Buckets: features/storage_buckets.md
+    - Assistants: features/assistant.md
+    - Agents and Environments: features/agents_and_environment.md
+theme:
+  name: readthedocs
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
