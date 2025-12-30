@@ -44,59 +44,59 @@
 
 **Prerequisites:** Vault Management permissions in the target workspace
 
-**1. Navigate to vaults**
-   - Click **"Security" → "Vaults"** in the main navigation
-   - Ensure you're in the correct workspace
+**1. Navigate to vaults**  
+   - Click **"Security" → "Vaults"** in the main navigation  
+   - Ensure you're in the correct workspace  
 
-**2. Create new vault**
-   - Click **"+ New Vault"**
+**2. Create new vault**  
+   - Click **"+ New Vault"**  
 
-**3. Define vault properties**
-   - **Vault Name**: Descriptive name indicating what secrets it contains (e.g., "Production_Database_Credentials")
-   - **Description**: Explain what secrets are stored and which robots use them
-   - **Workspace**: Confirm workspace assignment
+**3. Define vault properties**  
+   - **Vault Name**: Descriptive name indicating what secrets it contains (e.g., "Production_Database_Credentials")  
+   - **Description**: Explain what secrets are stored and which robots use them  
+   - **Workspace**: Confirm workspace assignment  
 
-**4. Configure access permissions**
-   - **Read Access**: Which users/robots can retrieve secrets
-   - **Write Access**: Which users can add/modify/delete secrets
-   - **Admin Access**: Which users can manage vault permissions
+**4. Configure access permissions**  
+   - **Read Access**: Which users/robots can retrieve secrets  
+   - **Write Access**: Which users can add/modify/delete secrets  
+   - **Admin Access**: Which users can manage vault permissions  
 
-**5. *Set security policies** (optional)
-   - **Access Logging**: Enhanced logging of all secret retrievals (recommended for highly sensitive vaults)
-   - **Rotation Reminder**: Remind admins to rotate secrets every X days
+**5. *Set security policies** (optional)  
+   - **Access Logging**: Enhanced logging of all secret retrievals (recommended for highly sensitive vaults)  
+   - **Rotation Reminder**: Remind admins to rotate secrets every X days  
 
-**6. Create the vault**
-   - Click **"Create Vault"**
-   - The vault is created and ready to store secrets
+**6. Create the vault**  
+   - Click **"Create Vault"**  
+   - The vault is created and ready to store secrets  
 
 **[Image Placeholder: Create Vault Form]**
 
 #### Adding Secrets to a Vault
 
-**1. Open the vault**
-   - From the vaults list, click the vault name
-   - Click the **"Secrets"** tab
+**1. Open the vault**  
+   - From the vaults list, click the vault name  
+   - Click the **"Secrets"** tab  
 
-**2. Add a new secret**
-   - Click **"+ Add Secret"**
+**2. Add a new secret**  
+   - Click **"+ Add Secret"**  
 
-**3. Provide secret information**
-   - **Secret Key**: Identifier for this secret (e.g., "database_password")
-     - Use clear, consistent naming conventions
-     - Avoid spaces (use underscores: "api_key" not "api key")
+**3. Provide secret information**  
+   - **Secret Key**: Identifier for this secret (e.g., "database_password")  
+     - Use clear, consistent naming conventions  
+     - Avoid spaces (use underscores: "api_key" not "api key")  
    
-   - **Secret Value**: The actual sensitive data
-     - For text secrets: Enter the password, token, or key directly
-     - For file secrets: Upload the certificate or key file
+   - **Secret Value**: The actual sensitive data  
+     - For text secrets: Enter the password, token, or key directly  
+     - For file secrets: Upload the certificate or key file  
 
-   - **Secret Type**: Text or File
+   - **Secret Type**: Text or File  
    
-   - **Description**: Optional note explaining what this secret is for
+   - **Description**: Optional note explaining what this secret is for  
 
-**4. Save the secret**
-   - Click **"Add Secret"**
-   - The secret is encrypted and stored
-   - **Important**: The plain text value is never displayed again after initial creation
+**4. Save the secret**  
+   - Click **"Add Secret"**  
+   - The secret is encrypted and stored  
+   - **Important**: The plain text value is never displayed again after initial creation  
 
 **[Image Placeholder: Add Secret to Vault Form]**
 
@@ -104,48 +104,48 @@
 
 **Viewing Secret Keys**
 
-**1. Open the vault**
-   - Navigate to the vault detail page
-   - The **"Secrets"** tab shows all secret keys in the vault
+**1. Open the vault**  
+   - Navigate to the vault detail page  
+   - The **"Secrets"** tab shows all secret keys in the vault  
 
-**2. Secret list displays**
-   - **Key names**: Visible to authorized users
-   - **Value preview**: Masked (e.g., "••••••••") for security
-   - **Last modified date**: When the secret was last updated
-   - **Created by**: Who added the secret
+**2. Secret list displays**  
+   - **Key names**: Visible to authorized users  
+   - **Value preview**: Masked (e.g., "••••••••") for security  
+   - **Last modified date**: When the secret was last updated  
+   - **Created by**: Who added the secret  
 
 **Updating a Secret Value**
 
-**1. Locate the secret**
-   - Find the secret key in the vault's secrets list
+**1. Locate the secret**  
+   - Find the secret key in the vault's secrets list  
 
-**2. Update value**
-   - Click the **"Edit"** icon (✏️) next to the secret
-   - **New Value**: Enter the updated password, token, or upload new file
-   - **Update Reason**: Document why the secret changed (e.g., "Scheduled quarterly rotation", "Compromised credential")
+**2. Update value**  
+   - Click the **"Edit"** icon (✏️) next to the secret  
+   - **New Value**: Enter the updated password, token, or upload new file  
+   - **Update Reason**: Document why the secret changed (e.g., "Scheduled quarterly rotation", "Compromised credential")  
 
-**3. Save changes**
-   - Click **"Update Secret"**
-   - The new value is encrypted and stored
-   - Old value is overwritten (not versioned—document elsewhere if version history is needed)
+**3. Save changes**  
+   - Click **"Update Secret"**  
+   - The new value is encrypted and stored  
+   - Old value is overwritten (not versioned, document elsewhere if version history is needed)  
 
-**Rotating Secrets**
+**Rotating Secrets**  
 
 Regular secret rotation is a security best practice:
 
-**1. Plan rotation**
-   - Identify secrets that need rotation (expired certificates, passwords older than policy allows)
-   - Coordinate with system owners to ensure new credentials work
+**1. Plan rotation**  
+   - Identify secrets that need rotation (expired certificates, passwords older than policy allows)  
+   - Coordinate with system owners to ensure new credentials work  
 
-**2. Update the secret in QuickRPA**
-   - Follow the update process above
+**2. Update the secret in QuickRPA**  
+   - Follow the update process above  
+  
+**3. Test robot access**  
+   - Manually run a robot that uses this secret to verify it works  
+   - Monitor logs for authentication errors  
 
-**3. Test robot access**
-   - Manually run a robot that uses this secret to verify it works
-   - Monitor logs for authentication errors
-
-**4. Document rotation**
-   - Log rotation date and reason in your security documentation
+**4. Document rotation**  
+   - Log rotation date and reason in your security documentation  
 
 **[Image Placeholder: Vault Secrets List]**
 
@@ -153,61 +153,61 @@ Regular secret rotation is a security best practice:
 
 Understanding the secure retrieval process helps you design secure automation:
 
-**1. Robot Requests Secret**
-   - Robot (via agent) calls the API: "Get secret 'database_password' from vault 'Production_Database_Credentials'"
+**1. Robot Requests Secret**  
+   - Robot (via agent) calls the API: "Get secret 'database_password' from vault 'Production_Database_Credentials'"  
 
-**2. QuickRPA Validates Access**
-   - Verifies the robot has read permission for this vault
-   - Checks that the requesting agent is authorized
+**2. QuickRPA Validates Access**  
+   - Verifies the robot has read permission for this vault  
+   - Checks that the requesting agent is authorized  
 
-**3. Secure Decryption & Re-Encryption**
-   - QuickRPA decrypts the secret from the database
-   - Generates a temporary encryption key specific to this robot/agent session
-   - Re-encrypts the secret using the temporary key
-   - Sends encrypted secret to the agent
+**3. Secure Decryption & Re-Encryption**  
+   - QuickRPA decrypts the secret from the database  
+   - Generates a temporary encryption key specific to this robot/agent session  
+   - Re-encrypts the secret using the temporary key  
+   - Sends encrypted secret to the agent  
 
-**4. Agent Decrypts & Uses**
-   - Agent decrypts the secret using the temporary key
-   - Provides the plain text secret to the robot for use
-   - Robot uses the credential (e.g., logs into a system)
-   - Secret is cleared from memory after use
+**4. Agent Decrypts & Uses**  
+   - Agent decrypts the secret using the temporary key  
+   - Provides the plain text secret to the robot for use  
+   - Robot uses the credential (e.g., logs into a system)  
+   - Secret is cleared from memory after use  
 
-**5. Audit Logging**
-   - Access is logged: timestamp, robot, agent, secret key accessed
-   - Logs available for security review and compliance
+**5. Audit Logging**  
+   - Access is logged: timestamp, robot, agent, secret key accessed  
+   - Logs available for security review and compliance  
 
-**Important Security Notes:**  
-- Secrets are **never** transmitted or stored in plain text  
-- Secrets are **never** written to logs (properly designed robots should never log secrets)  
-- Each retrieval generates a unique encryption key  
-- Access is logged for every retrieval  
+**Important Security Notes:**    
+- Secrets are **never** transmitted or stored in plain text    
+- Secrets are **never** written to logs (properly designed robots should never log secrets)    
+- Each retrieval generates a unique encryption key    
+- Access is logged for every retrieval    
 
 **[Image Placeholder: Diagram of Secure Secret Retrieval Flow]**
 
 #### Managing Vault Access
 
-**1. View current permissions**
-   - Open vault detail page
-   - Click **"Permissions"** tab
-   - See users and robots with access
+**1. View current permissions**  
+   - Open vault detail page  
+   - Click **"Permissions"** tab  
+   - See users and robots with access  
 
-**2. Grant access to a user**
-   - Click **"+ Add User Permission"**
-   - Select user from dropdown
-   - Choose permission level: Read, Write, or Admin
-   - Click **"Grant Access"**
+**2. Grant access to a user**  
+   - Click **"+ Add User Permission"**  
+   - Select user from dropdown  
+   - Choose permission level: Read, Write, or Admin  
+   - Click **"Grant Access"**  
 
-**3. Grant access to a robot**
-   - Click **"+ Add Robot Permission"**
-   - Select robot from dropdown
-   - Typically grant Read access only (robots shouldn't modify secrets)
-   - Click **"Grant Access"**
+**3. Grant access to a robot**  
+   - Click **"+ Add Robot Permission"**  
+   - Select robot from dropdown  
+   - Typically grant Read access only (robots shouldn't modify secrets)  
+   - Click **"Grant Access"**  
 
-**4. Revoke access**
-   - Find the user/robot in the permissions list
-   - Click **"Revoke"** button
-   - Confirm revocation
-   - Access is immediately removed
+**4. Revoke access**  
+   - Find the user/robot in the permissions list  
+   - Click **"Revoke"** button  
+   - Confirm revocation  
+   - Access is immediately removed  
 
 **[Image Placeholder: Vault Permissions Management Screen]**
 

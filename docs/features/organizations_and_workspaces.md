@@ -43,22 +43,22 @@ A **Workspace** is a sub-division within an organization, providing granular sep
 
 **Prerequisites:** System Administrator or Organization Administrator role
 
-1. **Navigate to the Organizations section**
-   - Click on **"Administration"** in the main navigation menu
-   - Select **"Organizations"** from the submenu
+**1. Navigate to the Organizations section**  
+   - Click on **"Administration"** in the main navigation menu  
+   - Select **"Organizations"** from the submenu  
 
-2. **Initiate organization creation**
-   - Click the **"+ New Organization"** button in the top-right corner
+**2. Initiate organization creation**  
+   - Click the **"+ New Organization"** button in the top-right corner  
 
-3. **Complete the organization form**
-   - Enter **Organization Name** (e.g., "Acme Corporation")
-   - Provide an optional **Description** explaining the organization's purpose
-   - Set **Organizational Settings** such as timezone and default language
-   - Configure **License Allocation** if applicable
+**3. Complete the organization form**  
+   - Enter **Organization Name** (e.g., "Acme Corporation")  
+   - Provide an optional **Description** explaining the organization's purpose  
+   - Set **Organizational Settings** such as timezone and default language  
+   - Configure **License Allocation** if applicable  
 
-4. **Save the organization**
-   - Click **"Create Organization"** to finalize
-   - You'll be redirected to the organization's detail page
+**4. Save the organization**  
+   - Click **"Create Organization"** to finalize  
+   - You'll be redirected to the organization's detail page  
 
 **[Image Placeholder: Create Organization Form]**
 
@@ -66,26 +66,26 @@ A **Workspace** is a sub-division within an organization, providing granular sep
 
 **Prerequisites:** Organization Administrator role for the target organization
 
-1. **Navigate to the Workspaces section**
-   - From your organization's dashboard, click **"Workspaces"** in the navigation
-   - Alternatively, go to **Administration → Workspaces**
+**1. Navigate to the Workspaces section**  
+   - From your organization's dashboard, click **"Workspaces"** in the navigation  
+   - Alternatively, go to **Administration → Workspaces**  
 
-2. **Start workspace creation**
-   - Click the **"+ New Workspace"** button
+**2. Start workspace creation**  
+   - Click the **"+ New Workspace"** button  
 
-3. **Fill in workspace details**
-   - **Workspace Name**: Descriptive name (e.g., "Finance Automation")
-   - **Parent Organization**: Select the organization this workspace belongs to
-   - **Description**: Explain the workspace's purpose and scope
-   - **Workspace Settings**: Configure default robot execution settings
+**3. Fill in workspace details**  
+   - **Workspace Name**: Descriptive name (e.g., "Finance Automation")  
+   - **Parent Organization**: Select the organization this workspace belongs to  
+   - **Description**: Explain the workspace's purpose and scope  
+   - **Workspace Settings**: Configure default robot execution settings  
 
-4. **Configure access settings**
-   - Set **Default Permissions** for workspace users
-   - Configure **Visibility Settings** (who can see this workspace)
+**4. Configure access settings**  
+   - Set **Default Permissions** for workspace users  
+   - Configure **Visibility Settings** (who can see this workspace)  
 
-5. **Create the workspace**
-   - Click **"Create Workspace"** to complete setup
-   - You'll see the new workspace in your workspaces list
+**5. Create the workspace**  
+   - Click **"Create Workspace"** to complete setup  
+   - You'll see the new workspace in your workspaces list  
 
 **[Image Placeholder: Create Workspace Form]**
 

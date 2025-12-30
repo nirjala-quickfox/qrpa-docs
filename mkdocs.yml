@@ -5,7 +5,7 @@ nav:
     - Home: index.md
   - Overview: 
     - Who uses QuickRPA?: users.md
-    - Typical Workflows: typical_workflows.md
+    - Typical Workflow: typical_workflows.md
     - System Architecture: system_architecture.md
   - Features:
     - Overview: features/feature_guide.md

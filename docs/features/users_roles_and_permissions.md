@@ -63,62 +63,62 @@ QuickRPA enforces fine-grained permissions across nearly every API endpoint, ens
 
 **Prerequisites:** Organization Administrator or User Management permissions
 
-1. **Access user management**
-   - Navigate to **"Administration" → "Users"**
+**1. Access user management**  
+   - Navigate to **"Administration" → "Users"**  
 
-2. **Initiate user creation**
-   - Click **"+ Add User"** button
+**2. Initiate user creation**  
+   - Click **"+ Add User"** button  
 
-3. **Enter user information**
-   - **Full Name**: User's complete name
-   - **Email Address**: Primary contact and potentially username
-   - **Username**: Login identifier (if different from email)
-   - **Authentication Method**: Choose username/password, LDAP, or OIDC
+**3. Enter user information**  
+   - **Full Name**: User's complete name  
+   - **Email Address**: Primary contact and potentially username  
+   - **Username**: Login identifier (if different from email)  
+   - **Authentication Method**: Choose username/password, LDAP, or OIDC  
 
-4. **Set organizational membership**
-   - **Organization**: Select the organization this user belongs to
-   - **Primary Workspace**: Assign the user's default workspace
+**4. Set organizational membership**  
+   - **Organization**: Select the organization this user belongs to  
+   - **Primary Workspace**: Assign the user's default workspace  
 
-5. **Assign roles**
-   - Click **"+ Assign Role"**
-   - Select appropriate roles from the dropdown (e.g., "Robot Developer", "Business Operator")
-   - Add multiple roles if needed
+**5. Assign roles**  
+   - Click **"+ Assign Role"**  
+   - Select appropriate roles from the dropdown (e.g., "Robot Developer", "Business Operator")  
+   - Add multiple roles if needed  
 
-6. **Configure workspace access**
-   - In the **"Workspace Access"** section, click **"+ Add Workspace"**
-   - Select each workspace the user should access
-   - Define permissions for each workspace (View, Edit, Execute)
+**6. Configure workspace access**  
+   - In the **"Workspace Access"** section, click **"+ Add Workspace"**  
+   - Select each workspace the user should access  
+   - Define permissions for each workspace (View, Edit, Execute)  
 
-7. **Complete user creation**
-   - Click **"Create User"**
-   - If using username/password, optionally **"Send Welcome Email"** with temporary credentials
+**7. Complete user creation**  
+   - Click **"Create User"**  
+   - If using username/password, optionally **"Send Welcome Email"** with temporary credentials  
 
 **[Image Placeholder: Create User Form]**
 
 #### Managing Roles
 
-**Prerequisites:** Organization Administrator or Roles Management permissions
+**Prerequisites:** Organization Administrator or Roles Management permissions  
 
-1. **Navigate to roles management**
-   - Go to **"Administration" → "Roles"**
+**1. Navigate to roles management**  
+   - Go to **"Administration" → "Roles"**  
 
-2. **View existing roles**
-   - Review the list of available roles and their descriptions
-   - Click any role to see its assigned permissions
+**2. View existing roles**  
+   - Review the list of available roles and their descriptions  
+   - Click any role to see its assigned permissions  
 
-3. **Create a custom role**
-   - Click **"+ Create Role"**
-   - **Role Name**: Descriptive name (e.g., "Finance Robot Developer")
-   - **Description**: Explain who should have this role and why
+**3. Create a custom role**  
+   - Click **"+ Create Role"**  
+   - **Role Name**: Descriptive name (e.g., "Finance Robot Developer")  
+   - **Description**: Explain who should have this role and why  
    
-4. **Assign permissions to the role**
-   - Browse through permission categories (Robots, Queues, Vaults, etc.)
-   - Check each permission this role should include
-   - Use **"Select All"** for administrative roles or granularly select specific permissions
+**4. Assign permissions to the role**  
+   - Browse through permission categories (Robots, Queues, Vaults, etc.)  
+   - Check each permission this role should include  
+   - Use **"Select All"** for administrative roles or granularly select specific permissions  
 
-5. **Save the role**
-   - Click **"Create Role"**
-   - The role is now available for assignment to users
+**5. Save the role**  
+   - Click **"Create Role"**  
+   - The role is now available for assignment to users  
 
 **[Image Placeholder: Create Role Form with Permissions Checklist]**
 
@@ -126,28 +126,28 @@ QuickRPA enforces fine-grained permissions across nearly every API endpoint, ens
 
 **Prerequisites:** System Administrator role
 
-1. **Access authentication settings**
-   - Navigate to **"System Settings" → "Authentication"**
-   - Select the **"LDAP"** tab
+**1. Access authentication settings**  
+   - Navigate to **"System Settings" → "Authentication"**  
+   - Select the **"LDAP"** tab  
 
-2. **Configure LDAP connection**
-   - **LDAP Server URL**: Your directory server address (e.g., `ldap://ldap.company.com:389`)
-   - **Bind DN**: Service account for QuickRPA (e.g., `cn=quickrpa,ou=service,dc=company,dc=com`)
-   - **Bind Password**: Service account password
-   - **Base DN**: Where to search for users (e.g., `ou=users,dc=company,dc=com`)
+**2. Configure LDAP connection**  
+   - **LDAP Server URL**: Your directory server address (e.g., `ldap://ldap.company.com:389`)  
+   - **Bind DN**: Service account for QuickRPA (e.g., `cn=quickrpa,ou=service,dc=company,dc=com`)  
+   - **Bind Password**: Service account password  
+   - **Base DN**: Where to search for users (e.g., `ou=users,dc=company,dc=com`)  
 
-3. **Configure user mapping**
-   - **Username Attribute**: LDAP field for username (typically `sAMAccountName` or `uid`)
-   - **Email Attribute**: LDAP field for email (typically `mail`)
-   - **Full Name Attribute**: LDAP field for name (typically `displayName` or `cn`)
+**3. Configure user mapping**  
+   - **Username Attribute**: LDAP field for username (typically `sAMAccountName` or `uid`)  
+   - **Email Attribute**: LDAP field for email (typically `mail`)  
+   - **Full Name Attribute**: LDAP field for name (typically `displayName` or `cn`)  
 
-4. **Test connection**
-   - Click **"Test Connection"** to verify settings
-   - Attempt a test login with an LDAP user account
+**4. Test connection**  
+   - Click **"Test Connection"** to verify settings  
+   - Attempt a test login with an LDAP user account  
 
-5. **Enable LDAP authentication**
-   - Toggle **"Enable LDAP Authentication"** to active
-   - Click **"Save Settings"**
+**5. Enable LDAP authentication**  
+   - Toggle **"Enable LDAP Authentication"** to active  
+   - Click **"Save Settings"**  
 
 **[Image Placeholder: LDAP Configuration Screen]**
 
@@ -155,28 +155,28 @@ QuickRPA enforces fine-grained permissions across nearly every API endpoint, ens
 
 **Prerequisites:** System Administrator role
 
-1. **Access OIDC settings**
+**1. Access OIDC settings**
    - Navigate to **"System Settings" → "Authentication"**
    - Select the **"OIDC"** tab
 
-2. **Register QuickRPA with your identity provider**
+**2. Register QuickRPA with your identity provider**
    - Log into your OIDC provider (Okta, Azure AD, Auth0, etc.)
    - Create a new application registration for QuickRPA
    - Note the **Client ID** and **Client Secret** provided
    - Configure the **Redirect URI** (QuickRPA will display the correct URL to use)
 
-3. **Configure OIDC in QuickRPA**
+**3. Configure OIDC in QuickRPA**
    - **Provider Name**: Friendly name (e.g., "Okta SSO")
    - **Client ID**: From your identity provider
    - **Client Secret**: From your identity provider
    - **Discovery URL**: Your OIDC provider's discovery endpoint (e.g., `https://your-tenant.okta.com/.well-known/openid-configuration`)
 
-4. **Configure claim mapping**
+**4. Configure claim mapping**
    - **Username Claim**: Which token claim contains username (typically `preferred_username` or `email`)
    - **Email Claim**: Which claim contains email (typically `email`)
    - **Name Claim**: Which claim contains full name (typically `name`)
 
-5. **Test and enable**
+**5. Test and enable**
    - Click **"Test OIDC Flow"** to verify configuration
    - Toggle **"Enable OIDC Authentication"**
    - Click **"Save Settings"**
